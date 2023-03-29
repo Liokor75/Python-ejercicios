@@ -1,0 +1,15 @@
+def FizzBuzz():
+  num_list = range(1, 101)
+  multiplo_de_tres = [num for num in num_list if num%3 == 0]
+  multiplo_de_cinco = [num for num in num_list if num%5 == 0]
+  for num in num_list:
+      if num in multiplo_de_tres and num in multiplo_de_cinco:
+        print("FizzBuzz")
+      elif num in multiplo_de_tres:
+        print("Fizz")
+      elif num in multiplo_de_cinco:
+        print("Buzz")
+      else:
+        print(num)
+
+FizzBuzz()
