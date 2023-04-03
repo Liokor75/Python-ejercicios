@@ -1,0 +1,5 @@
+def tabla_de_multiplicar(numero):
+  for num in range(1, 11):
+    print(num, "x", numero, "=", numero*num)
+
+tabla_de_multiplicar(5)
