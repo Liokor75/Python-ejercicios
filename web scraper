@@ -1,0 +1,27 @@
+import requests
+from bs4 import BeautifulSoup
+
+def web_scraper_posts(url):
+    r = requests.get(url)
+    soup = BeautifulSoup(r.text, "html.parser")
+    titulos = soup.find_all("div", class_="post-link-title")
+
+    for titulo in titulos:
+        print(titulo.a.text)
+
+web_scraper_posts("https://www.dailysmarty.com/topics/python")
+
+
+
+#Resultado:
+Installing Anaconda Python Data Science Platform
+Python Libraries to Import for Data Science Programs
+Shortcut for Opening the Object Inspector in Python Spyder
+Python Script for Replacing Missing Data in a Machine Learning Algorithm
+Python Script for Pulling in the Same Column from an Array of Arrays    
+How to Implement FizzBuzz in Python
+How to Think Like a Computer Scientist
+Base Case Example for How to Test a Python Class
+Installing and Working with Pipenv
+Steps for Building a Flask API Application with Python 3
+
